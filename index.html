@@ -18,6 +18,12 @@
   </main>
   <script>
     fetch("links.json", { cache: "no-cache"})
+      .then(res => {
+        if (!res.ok) {
+          throw new Error(res.status);
+        }
+        return res.json();
+      })
       .then(data => {
         const name = data.name || "";
         document.title = name;
@@ -37,7 +43,7 @@
           const li = document.createElement("li");
           const a = document.createElement("a");
           a.className = "link";
-          a.href = "item.url";
+          a.href = item.url;
           a.textContent = item.title;
 
           if (/^https?:/.test(item.url)) { a.target = "_blank"; a.rel = "noopener";}
