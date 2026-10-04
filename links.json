@@ -1,16 +1,16 @@
 {
   "name": "Exchange at University of Waterloo",
-  "bio": "Information and experiences from a TU Delft EE student",
+  "bio": "Information and experiences from a TU Delft Electrical Engineering student",
   "footer": "By Christopher Kusumo",
   "links": [
     {
-      "title": "UW Website: Come to Waterloo on exchange",
+      "title": "UWaterloo Website: Come to Waterloo on exchange",
       "description": "General information for interested students",
       "url": "https://uwaterloo.ca/international-experience/exchange-and-study-abroad/come-waterloo"
     },
     {
-      "title": "UW Website: Prepare for Exchange",
-      "description": "More detailed information for prospective students preparing for exchange at UW",
+      "title": "UWaterloo Website: Prepare for Exchange",
+      "description": "More detailed information for prospective students preparing for exchange at UWaterloo",
       "url": "https://uwaterloo.ca/international-experience/blog/prepare-exchange"
     },
     {
