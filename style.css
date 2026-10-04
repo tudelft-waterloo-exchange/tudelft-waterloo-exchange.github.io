@@ -1,56 +1,59 @@
 :root {
-    --bg: #f3f5f2;
-    --ink: #1c2420;
-    --muted: #5d6a63;
-    --card: #ffffff;
-    --line: #d5dcd7;
-    --accent: #2f6f4f;
+  --bg: #f3f5f2;
+  --ink: #1c2420;
+  --muted: #5d6a63;
+  --card: #ffffff;
+  --line: #d5dcd7;
+  --accent: #2f6f4f;
 }
 @media (prefers-color-scheme: dark) {
-    :root {
-        --bg: #141a17;
-        --ink: #e8eee9;
-        --muted: #94a39a;
-        --card: #1d2521;
-        --line: #2e3933;
-        --accent: #6fcf9b;
-    }
+  :root {
+    --bg: #141a17;
+    --ink: #e8eee9;
+    --muted: #94a39a;
+    --card: #1d2521;
+    --line: #2e3933;
+    --accent: #6fcf9b;
+  }
 }
 * { box-sizing: border-box; }
 html, body { margin: 0; }
 body {
-    background: var(--bg);
-    color: var(--ink);
-    font-family: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
-    line-height: 1.5;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    padding: 56px 20px 40px;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 56px 20px 40px;
 }
 main { width: 100%; max-width: 440px; }
 .avatar {
-    width: 88px; height: 88px;
-    border-radius: 50%;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto 16px;
-    background: var(--line);
+  width: 88px; height: 88px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 16px;
+  background: var(--line);
+}
+.avatar[hidden] {
+  display: none;
 }
 h1 { font-size: 1.5rem; margin: 0; text-align: center; }
 .bio { color: var(--muted); text-align: center; margin: 6px 0 28px; }
 ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
 .link {
-    display: block;
-    padding: 14px 18px;
-    background: var(--card);
-    border: 1px solid var(--line);
-    border-radius: 10px;
-    color: var(--ink);
-    text-decoration: none;
-    font-weight: 600;
-    text-align: center;
-    transition: border-color .15s, transform .15s;
+  display: block;
+  padding: 14px 18px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  transition: border-color .15s, transform .15s;
 }
 .link:hover { border-color: var(--accent); transform: translateY(-2px); }
 .link:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }

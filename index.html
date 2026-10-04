@@ -9,20 +9,47 @@
 </head>
 <body>
   <main>
-    <!-- Put a square photo named avatar.jpg next to this file, or delete this line -->
-    <!-- <img class="avatar" src="avatar.jpg" alt="" onerror="this.style.display='none'"> -->
-    <h1>Your Name</h1>
-    <p class="bio">A one-line description of what you do.</p>
-
-    <!-- To add a link, copy one <li> block. To remove one, delete it. -->
-    <ul>
-      <li><a class="link" href="https://github.com/your-username">GitHub<small>Code and projects</small></a></li>
-      <li><a class="link" href="https://www.linkedin.com/in/your-username">LinkedIn</a></li>
-      <li><a class="link" href="https://www.instagram.com/your-username">Instagram</a></li>
-      <li><a class="link" href="mailto:you@example.com">Email me</a></li>
-    </ul>
-
-    <footer>&copy; Your Name</footer>
+    <img class="avatar" id="avatar" alt="" hidden>
+    <h1 id="name"></h1>
+    <p class="bio" id="bio"></p>
+    <ul id="links"></ul>
+    <p class="bio" id="error" hidden>Couldn't load links.json</p>
   </main>
+  <script>
+    fetch("links.json", { cache: "no-cache"})
+      .then(data => {
+        const name = data.name || "";
+        document.title = name;
+        document.getElementById("name").textContent = name;
+        document.getElementById("bio").textContent = data.bio || "";
+        document.getElementById("footer").textContent = name ? "\u00a9 " + name : "";
+
+        if (data.avatar) {
+          const img = document.getElementById("avatar")
+          img.src = data.avatar;
+          img.hidden = false;
+          img.onerror = () => { img.hidden = true; };
+        }
+
+        const list = document.getElementById("links");
+        (data.links || []).forEach(item => {
+          const li = document.createElement("li");
+          const a = document.createElement("a");
+          a.className = "link";
+          a.href = "item.url";
+          a.textContent = item.title;
+
+          if (/^https?:/.test(item.url)) { a.target = "_blank"; a.rel = "noopener";}
+          if (item.description) {
+            const small = document.createElement("small");
+            small.textContent = item.description;
+            a.appendChild(small);
+          }
+          li.appendChild(a);
+          list.appendChild(li);
+        });
+      })
+      .catch(() => { document.getElementById("error").hidden = false; })
+  </script>
 </body>
 </html>
