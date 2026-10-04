@@ -29,7 +29,7 @@
         document.title = name;
         document.getElementById("name").textContent = name;
         document.getElementById("bio").textContent = data.bio || "";
-        document.getElementById("footer").textContent = footer || "";
+        document.getElementById("footer").textContent = data.footer || "";
 
         if (data.avatar) {
           const img = document.getElementById("avatar")
