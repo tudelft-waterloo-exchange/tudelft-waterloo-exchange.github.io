@@ -1,0 +1,24 @@
+{
+  "name": "Your Name",
+  "bio": "A one-line description of what you do.",
+  "avatar": "avatar.jpg",
+  "links": [
+    {
+      "title": "GitHub",
+      "description": "Code and projects",
+      "url": "https://github.com/mrstoffer"
+    },
+    {
+      "title": "LinkedIn",
+      "url": "https://www.linkedin.com/in/your-username"
+    },
+    {
+      "title": "Instagram",
+      "url": "https://www.instagram.com/mr_stoffer"
+    },
+    {
+      "title": "Email me (C.A.Kusumo@student.tudelft.nl)",
+      "url": "mailto:c.a.kusumo@student.tudelft.nl"
+    }
+  ]
+}
