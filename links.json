@@ -1,19 +1,27 @@
 {
-  "name": "Your Name",
-  "bio": "A one-line description of what you do.",
+  "name": "Exchange at University of Waterloo",
+  "bio": "Information and experiences from a TU Delft EE student",
+  "footer": "By Christopher Kusumo",
   "links": [
     {
-      "title": "GitHub",
-      "description": "Code and projects",
-      "url": "https://github.com/mrstoffer"
+      "title": "UW Website: Come to Waterloo on exchange",
+      "description": "General information for interested students",
+      "url": "https://uwaterloo.ca/international-experience/exchange-and-study-abroad/come-waterloo"
     },
     {
-      "title": "LinkedIn",
-      "url": "https://www.linkedin.com/in/your-username"
+      "title": "UW Website: Prepare for Exchange",
+      "description": "More detailed information for prospective students preparing for exchange at UW",
+      "url": "https://uwaterloo.ca/international-experience/blog/prepare-exchange"
     },
     {
-      "title": "Instagram",
-      "url": "https://www.instagram.com/mr_stoffer"
+      "title": "UWaterloo Fact Sheet",
+      "description": "Fact sheet for students interested in doing exchange at UWaterloo (same as on the Study Abroad EEMCS brightspace page)",
+      "url": "https://uwaterloo.ca/international-experience/sites/default/files/uploads/documents/sso-25-128-inbound-exchange-fact-sheet-2026-2027_0.pdf"
+    },
+    {
+      "title": "My own blog",
+      "description": "A blog post with my own detailed tips and experiences",
+      "url": "https://mrstoffer.github.io"
     },
     {
       "title": "Email me",
